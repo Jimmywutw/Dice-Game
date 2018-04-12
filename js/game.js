@@ -41,7 +41,7 @@ document.getElementById('player'+ currentPlayer +'-total-score').textContent = p
 document.querySelector('.panel-'+ currentPlayer ).classList.remove('active');
 currentPlayer = 2;
 document.querySelector('.panel-'+ currentPlayer ).classList.add('active');
-document.getElementById('player2-current-score').textContent = 0;
+document.querySelector('#player'+ currentPlayer +'-current-score').textContent = 0;
 }else{
 
 document.querySelector('#player'+ currentPlayer +'-current-score').textContent = dice;
@@ -50,7 +50,7 @@ document.getElementById('player'+ currentPlayer +'-total-score').textContent = p
 document.querySelector('.panel-'+ currentPlayer ).classList.remove('active');
 currentPlayer = 1;
 document.querySelector('.panel-'+ currentPlayer ).classList.add('active');
-document.getElementById('player1-current-score').textContent = 0;
+document.querySelector('#player'+ currentPlayer +'-current-score').textContent = 0;
 
 }
 
@@ -60,14 +60,14 @@ console.log(counter);
 if (counter === 7){
 	if(player1totalscore > player2totalscore){
 		document.querySelector('.winner1').style.display = 'block';
-		document.getElementById('player1-current-score').style = 'margin-top:0';
+		document.getElementById('player1-current-score').style = 'margin-top:-2px';
 		
 		isPlaying = false;
 
 	}
 else if (player1totalscore < player2totalscore) {
 		document.querySelector('.winner2').style.display = 'block';
-		document.getElementById('player2-current-score').style = 'margin-top:0';
+		document.getElementById('player2-current-score').style = 'margin-top:-2px';
 		
 		isPlaying = false;
 }else {
@@ -100,7 +100,7 @@ isPlaying = true;
 	init();
 
 
-	
+
 });
 
 function init(){
